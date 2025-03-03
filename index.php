@@ -6,6 +6,7 @@
         <title>PHP & mysql</title> 
 </head>
 <body>
+    
     <h1>我的練習 php & mysql</h1>
     <hr>
     <p>今天是: <?= date("Y年M月D日")?></p>
