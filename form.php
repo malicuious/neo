@@ -74,7 +74,7 @@
 
         <fieldset>
             <legend>資料上傳</legend>
-            <p>姓名<input type="text" name="name" id="name"></p>
+            <input type="file" name="file" id="file">
         </fieldset>
 
         
