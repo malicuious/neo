@@ -60,6 +60,31 @@
 
         <fieldset>
             <legend>滿意度</legend>
+            <label for="">場地</label>
+            <input type="radio" name="place" id="place1" value="5">
+            <label for="place1">完全滿意</label>
+            <input type="radio" name="place" id="place2" value="4">
+            <label for="place2">超級滿意</label>
+            <input type="radio" name="place" id="place3" value="3">
+            <label for="place3">非常滿意</label>
+            <input type="radio" name="place" id="place4" value="2">
+            <label for="place4">特別滿意</label>
+            <input type="radio" name="place" id="place5" value="1">
+            <label for="place5">普通滿意</label>
+
+            <label for="">設備</label>
+            <input type="radio" name="place" id="place1" value="5">
+            <label for="place1">完全滿意</label>
+            <input type="radio" name="place" id="place2" value="4">
+            <label for="place2">超級滿意</label>
+            <input type="radio" name="place" id="place3" value="3">
+            <label for="place3">非常滿意</label>
+            <input type="radio" name="place" id="place4" value="2">
+            <label for="place4">特別滿意</label>
+            <input type="radio" name="place" id="place5" value="1">
+            <label for="place5">普通滿意</label>
+
+            <label for="">服務</label>
             <input type="radio" name="place" id="place1" value="5">
             <label for="place1">完全滿意</label>
             <input type="radio" name="place" id="place2" value="4">
@@ -74,7 +99,11 @@
 
         <fieldset>
             <legend>資料上傳</legend>
-            <input type="file" name="file" id="file">
+            <label for="">同意書</label>
+            <input type="file" name="file" id="file1">
+
+            <label for="">個人照</label>
+            <input type="file" name="file" id="file2">
         </fieldset>
 
         
