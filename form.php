@@ -101,10 +101,15 @@
             <legend>資料上傳</legend>
             <label for="">同意書</label>
             <input type="file" name="file" id="file1">
-
-            <label for="">個人照</label>
-            <input type="file" name="file" id="file2">
-        </fieldset>
+            
+            <div>
+            <label for="">個人照</label>  
+            <input type="file" name="image" accept="image/*" onchange="preview_image(event)">
+            </div>
+            <div>
+            <img id="output_image" />
+            </div>
+            </fieldset>
 
         
     </form>
