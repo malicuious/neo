@@ -9,8 +9,19 @@
     <h1>活動報名表</h1>
     <form action="">
         <fieldset>
+            <p>
             <legend>基本資料</legend>
-            <p>姓名<input type="text" name="name" id="name"></p>
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name" value="" placeholder="請使用中文" required>
+            </p>
+            <p>
+            <label for=""></label>
+            <input type="radio" name="gender" id="gender1">
+            <label for="gender1">男生</label>
+            <input type="radio" name="gender" id="gender2">
+            <label for="gender2">男娘</label>
+
+            </p>
         </fieldset>
 
         <fieldset>
