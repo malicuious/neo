@@ -142,7 +142,7 @@ function preview_image(event) {
     <input type="submit" name="submit" value="送出">
 
    </form>
-   
+
    <script type='text/javascript'>
         function preview_image(event) {
         var reader = new FileReader();
@@ -175,12 +175,20 @@ if (isset($_POST["submit"])) {
 
     echo "<p>你的名字是:" . $name ."</p>";
 
-    if ($gender=="1") {
-        echo "<p>你是男生</p>";
-    } elseif ($gender=="2") {
-        echo "<p>你是男娘</p>";
+     if (isset($_REQUEST["gender"])) {
+        if ($_REQUEST["gender"]=='1'): 
+            $gender = "男生";
+        elseif ($_REQUEST["gender"]=='2') :
+            $gender = "男娘";
+        endif;
     } else {
-        echo "<p>你難道是不帶把的男娘?</p>";
+        $gender = "不帶把的男娘";
+    }
+
+    if (isset($_REQUEST["behavior"])) {
+        $behavior = implode(',', $_REQUEST["behavior"]);
+    } else {
+        $behavior = "沒有選任何項目";
     }
 
     echo "<p>你的生日:" . $bday ."</p>";
