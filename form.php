@@ -167,7 +167,6 @@ if (isset($_POST["submit"])) {
     $place   = $_REQUEST["place"];
     $service   = $_REQUEST["service"];
 
-    echo"收到資料";
     
 
     echo "<p>資料收到</p>";
@@ -190,6 +189,7 @@ if (isset($_POST["submit"])) {
         $behavior = "沒有選任何項目";
     }
 
+   
     echo "<p>你的生日:" . $bday ."</p>";
     echo "<p>你的電話:" . $phone ."</p>";
     echo "<p>你居住區域:" . $area ."</p>";
