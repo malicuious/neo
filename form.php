@@ -12,7 +12,7 @@
             <p>
             <legend>基本資料</legend>
             <label for="name">姓名</label>
-            <input type="text" name="name" id="name" value="" placeholder="請使用中文" required>
+            <input type="text" name="name" id="name" value="name" placeholder="請使用中文" required>
             </p>
             <p>
             <label for=""></label>
@@ -30,12 +30,12 @@
 
             <p>
                 <label for="phone">電話</label>
-                <input type="text" name="phone" id="phone" placeholder="例:09-12345678">
+                <input type="text" name="phone" id="phone" placeholder="例:09-12345678" value="phone">
             </p>
 
             <p>
             <label for="place">居住地區</label>
-            <select name="place" id="place">
+            <select name="place" id="place" value="area">
                 <option value="0">請選擇地區</option>
                 <option value="1">北部</option>
                 <option value="2">南部</option>
