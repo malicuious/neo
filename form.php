@@ -119,21 +119,73 @@
             </div>
         </fieldset>
 
-        <fieldset>
-            <legend>資料上傳</legend>
-            <label for="">同意書</label>
-            <input type="file" name="file" id="file1">
-
-            <div>
-            <label for="">個人照</label>  
-            <input type="file" name="image" accept="image/*" onchange="preview_image(event)">
-            </div>
-            <div>
-            <img id="output_image" />
-            </div>
-            </fieldset>
-
         
     </form>
+    
+    <script type='text/javascript'>
+function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+        var output = document.getElementById('output_image');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
+<fieldset>
+    <legend>資料上傳</legend>
+
+    <p>
+        <label for="">同意書</label>
+        <input type="file" name="agreement" id="agreement" accept=".pdf,.doc,.docx" >
+    </p>
+
+    <p>
+        <label for="image">個人照片</label>
+        <input type="file" name="image" accept="image/*" onchange="preview_image(event)" >
+        <div><img id="output_image" width="300"></div>
+    </p>
+
+   </fieldset>
+
+    <input type="submit" name="submit" value="送出">
+
+   </form>
+
+<?php
+
+if (isset($_POST["submit"])) {
+
+    $name   = $_REQUEST["name"];
+    $gender = $_REQUEST["gender"];
+    $bday   = $_REQUEST["bday"];
+    $phone  = $_REQUEST["phone"];
+    $area   = $_REQUEST["area"];
+    
+    if (isset($_POST["submit"])) {
+        echo"收到資料";
+    }
+
+    echo "<p>資料收到</p>";
+
+    echo "<p>你的名字是:" . $name ."</p>";
+
+    if ($gender=="1") {
+        echo "<p>你是男生</p>";
+    } elseif ($gender=="2") {
+        echo "<p>你是女生</p>";
+    } else {
+        echo "<p>你是男生還是女生?</p>";
+    }
+
+    echo "<p>你的生日:" . $bday ."</p>";
+    echo "<p>你的電話:" . $phone ."</p>";
+    echo "<p>你居住區域:" . $area ."</p>";
+}
+
+?>
+
+
 </body>
 </html>
