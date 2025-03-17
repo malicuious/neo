@@ -16,9 +16,9 @@
             </p>
             <p>
             <label for=""></label>
-            <input type="radio" name="gender" id="gender1">
+            <input type="radio" name="gender" id="gender1" value="1">
             <label for="gender1">男生</label>
-            <input type="radio" name="gender" id="gender2">
+            <input type="radio" name="gender" id="gender2" value="2">
             <label for="gender2">男娘</label>
             </p>
 
