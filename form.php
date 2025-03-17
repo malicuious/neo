@@ -166,10 +166,9 @@ if (isset($_POST["submit"])) {
     $equipment = $_REQUEST["equipment"];
     $place   = $_REQUEST["place"];
     $service   = $_REQUEST["service"];
+
+    echo"收到資料";
     
-    if (isset($_POST["submit"])) {
-        echo"收到資料";
-    }
 
     echo "<p>資料收到</p>";
 
