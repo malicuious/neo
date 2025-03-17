@@ -4,16 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewpert" content="width=device-width, initial-scale=1.0">
         <title>活動報名表</title> 
-        <script type='text/javascript'>
-        function preview_image(event) {
-        var reader = new FileReader();
-        reader.onload = function () {
-        var output = document.getElementById('output_image');
-        output.src = reader.result;
-        }
-        reader.readAsDataURL(event.target.files[0]);
-        }
-</script>
 </head>
 <body>
     <h1>活動報名表</h1>
@@ -60,17 +50,17 @@
 
         <fieldset>
             <legend>使用行為</legend>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="聊天">
             <label for="聊天">聊天</label>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="直播">
             <label for="直播">直播</label>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="書信">
             <label for="書信">書信</label>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="社群">
             <label for="社群">社群</label>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="購物">
             <label for="購物">購物</label>
-            <input type="checkbox" name="behavior" id="behavior">
+            <input type="checkbox" name="behavior" id="behavior" value="金融">
             <label for="金融">金融</label>
         </fieldset>
 
@@ -152,6 +142,17 @@ function preview_image(event) {
     <input type="submit" name="submit" value="送出">
 
    </form>
+   
+   <script type='text/javascript'>
+        function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+        var output = document.getElementById('output_image');
+        output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+        }
+</script>
 
 <?php
 
@@ -162,6 +163,9 @@ if (isset($_POST["submit"])) {
     $bday   = $_REQUEST["bday"];
     $phone  = $_REQUEST["phone"];
     $area   = $_REQUEST["area"];
+    $equipment = $_REQUEST["equipment"];
+    $place   = $_REQUEST["place"];
+    $service   = $_REQUEST["service"];
     
     if (isset($_POST["submit"])) {
         echo"收到資料";
@@ -174,14 +178,16 @@ if (isset($_POST["submit"])) {
     if ($gender=="1") {
         echo "<p>你是男生</p>";
     } elseif ($gender=="2") {
-        echo "<p>你是女生</p>";
+        echo "<p>你是男娘</p>";
     } else {
-        echo "<p>你是男生還是女生?</p>";
+        echo "<p>你難道是不帶把的男娘?</p>";
     }
 
     echo "<p>你的生日:" . $bday ."</p>";
     echo "<p>你的電話:" . $phone ."</p>";
     echo "<p>你居住區域:" . $area ."</p>";
+    echo "<p>使用行為: $behavior </p>";
+    echo "<p>滿意度: 場地: $place , 設備:$equipment, 服務:$service </p>";
 }
 
 ?>
