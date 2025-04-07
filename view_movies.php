@@ -14,19 +14,23 @@ if ($conn->connect_error) {
 }
 
 // 從資料庫中查詢電影資料
-$sql = "SELECT id, title, year, director, mtype, mdate, contant FROM movies";
+$sql = "SELECT title, year, director, mtype, mdate, contant FROM movie";
 $result = $conn->query($sql);
+
+// 檢查查詢是否成功
+if ($result === false) {
+    die("Error: " . $conn->error); // 輸出具體的錯誤訊息
+}
 
 // 顯示資料表
 if ($result->num_rows > 0) {
     echo "<h1>電影資料列表</h1>";
     echo "<table border='1'>";
-    echo "<tr><th>ID</th><th>電影名稱</th><th>發行年分</th><th>導演</th><th>類型</th><th>首映日期</th><th>簡介</th></tr>";
+    echo "<tr><th>電影名稱</th><th>發行年分</th><th>導演</th><th>類型</th><th>首映日期</th><th>簡介</th></tr>";
     
     // 輸出每一行資料
     while($row = $result->fetch_assoc()) {
         echo "<tr>
-                <td>" . $row["id"] . "</td>
                 <td>" . $row["title"] . "</td>
                 <td>" . $row["year"] . "</td>
                 <td>" . $row["director"] . "</td>
