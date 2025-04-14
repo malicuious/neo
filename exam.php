@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>產品資料</h1>
-        <form action="submit_movie.php" method="POST">
+     
             <fieldset>
                 <legend>Produce</legend>
 
@@ -38,6 +38,6 @@
 
 
             </fieldset>
-        </form>
+ 
     </body>
 </html>
