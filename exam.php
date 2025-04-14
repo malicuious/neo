@@ -38,9 +38,14 @@
                 </p>
 
                 <p>
-                    <input type="submit" value="提交">
+                    <input type="submit" value="提交"> 
+                    
+                    <a href="http://localhost:8080/exam/display_products.php">
+                    <button type="button">查看產品</button>
                 </p>
+                
             </fieldset>
         </form>
+
     </body>
 </html>
